@@ -3,7 +3,7 @@
 Сперва сделай гит клон
 
 ```
-git clone --branch Frontend https://github.com/LexaFrontDev/Galarey.git
+git clone https://github.com/LexaFrontDev/Galarey.git
 ```
 
 
