@@ -2,8 +2,8 @@ import { routesBuilder } from './RoutesBuilder.js';
 import { Routes } from '../Routes.js';
 
 
-export async function initRouter() {
-    const routes = await routesBuilder.collectRoutes();
+export function initRouter() {
+    const routes = routesBuilder.collectRoutes();
     const router = new Routes(routes);
     console.log(routes);
 

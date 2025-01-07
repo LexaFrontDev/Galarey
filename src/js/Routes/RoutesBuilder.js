@@ -1,6 +1,6 @@
 class RoutesBuilder {
     constructor() {
-        this.modules = require.context('../pages', false, /\.js$/);
+        this.modules = require.context('../pages', true, /\.js$/);
     }
 
     collectRoutes() {
