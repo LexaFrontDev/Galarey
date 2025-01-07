@@ -1,6 +1,6 @@
 class RoutesBuilder {
     constructor() {
-        this.modules = require.context('../pages', false, /\.js$/);
+        this.modules = require.context('../pages', true, /\.js$/);
     }
 
     collectRoutes() {
@@ -12,7 +12,7 @@ class RoutesBuilder {
             for (const exportName in module) {
                 if (exportName.startsWith('Routes')) { 
                     const routeName = exportName.replace('Routes', '').toLowerCase(); 
-                    const routePath =  `/${routeName}`; 
+                    const routePath =  routeName === 'home' ? '/' : `/${routeName}`; 
                     routes[routePath] = module[exportName]; 
                 }
             }
